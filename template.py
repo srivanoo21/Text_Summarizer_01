@@ -5,7 +5,7 @@ import logging
 logging.basicConfig(level=logging.INFO, format='[%(asctime)s]: %(message)s:')
 
 
-project_name = "testSummarizer"
+project_name = "textSummarizer"
 
 
 # Below list of files need to be created
