@@ -1,6 +1,7 @@
 # The functions which we will be using frequently in our code we will mention them here
 
 import os
+import box
 from box.exceptions import BoxValueError
 import yaml
 from textSummarizer.logging import logger
@@ -19,6 +20,7 @@ def read_yaml(path_to_yaml: Path) -> ConfigBox:
 
     Raises:
         ValueError: if yaml file is empty
+        e: empty file
         
     Returns:
         ConfigBox: ConfigBox type
@@ -29,7 +31,7 @@ def read_yaml(path_to_yaml: Path) -> ConfigBox:
             logger.info(f"yaml file: {path_to_yaml} loaded successfully")
             return ConfigBox(content)
     except BoxValueError:
-        raise ValueError(f"yaml file is empty")
+        raise ValueError("yaml file is empty")
     except Exception as e:
         raise e
     
