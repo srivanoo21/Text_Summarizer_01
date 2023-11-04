@@ -11,12 +11,12 @@ text:str = "What is Text Summarization?"
 
 app = FastAPI()
 
-app.get("/", tags=["authentication"])
+@app.get("/", tags=['authentication'])
 async def index():
     return RedirectResponse(url="/docs")
 
 
-app.get("/train")
+@app.get("/train")
 async def training():
     try:
         os.system("python main.py")
@@ -26,7 +26,7 @@ async def training():
         return Response(f"Error Occurred! {e}")
     
 
-app.post("/predict")
+@app.post("/predict")
 async def predict_route(text):
     try:
         obj = PredictionPipeline()
@@ -38,4 +38,4 @@ async def predict_route(text):
 
 
 if __name__ == "__main__":
-    uvicorn.run("main:app", host="127.0.0.1", port=8000, reload=True)
+    uvicorn.run(app, host="127.0.0.1", port=8000)
