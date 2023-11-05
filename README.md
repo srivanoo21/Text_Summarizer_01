@@ -128,7 +128,7 @@ Email: srivanoo21@gmail.com
 
     AWS_SECRET_ACCESS_KEY=
 
-    AWS_REGION = us-east-1
+    AWS_REGION = ap-southeast-2
 
     AWS_ECR_LOGIN_URI = demo>>  069883532009.dkr.ecr.ap-southeast-2.amazonaws.com
 
