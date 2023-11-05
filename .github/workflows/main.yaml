@@ -88,7 +88,23 @@ jobs:
          
       - name: Stop and remove container if running
         run: |
-         docker ps -q --filter "name=textsummarization" | grep -q . && docker stop textsummarization && docker rm -fv textsummarization
+         #docker ps -q --filter "name=textsummarization" | grep -q . && docker stop textsummarization && docker rm -fv textsummarization
+         if docker ps -q --filter "name=textsummarization" | grep -q .; then
+          if docker stop textsummarization; then
+              echo "Container stopped successfully"
+          else
+              echo "Failed to stop the container"
+          fi
+
+          if docker rm -fv textsummarization; then
+              echo "Container removed successfully"
+          else
+              echo "Failed to remove the container"
+          fi
+         else
+             echo "Container not found"
+         fi
+
        
       - name: Run Docker Image to serve users
         run: |
