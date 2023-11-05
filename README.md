@@ -90,7 +90,7 @@ Email: srivanoo21@gmail.com
 
 	
 ## 3. Create ECR repo to store/save docker image
-    - Save the URI: 069883532009.dkr.ecr.ap-southeast-2.amazonaws.com/textsumm
+    - Save the URI: 069883532009.dkr.ecr.ap-southeast-2.amazonaws.com/textsummecr
 
 	
 ## 4. Create EC2 machine (Ubuntu) 
@@ -132,4 +132,4 @@ Email: srivanoo21@gmail.com
 
     AWS_ECR_LOGIN_URI = demo>>  069883532009.dkr.ecr.ap-southeast-2.amazonaws.com
 
-    ECR_REPOSITORY_NAME = textsumm
+    ECR_REPOSITORY_NAME = textsummecr
