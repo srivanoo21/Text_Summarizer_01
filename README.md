@@ -1,4 +1,4 @@
-# Text Summarizer Project - Extractive approach
+# Text Summarizer Project for conversation - Extractive approach
 
 ## Workflows
 
