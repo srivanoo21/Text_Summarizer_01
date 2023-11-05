@@ -90,7 +90,7 @@ Email: srivanoo21@gmail.com
 
 	
 ## 3. Create ECR repo to store/save docker image
-    - Save the URI: 566373416292.dkr.ecr.us-east-1.amazonaws.com/text-s
+    - Save the URI: 069883532009.dkr.ecr.ap-southeast-2.amazonaws.com/textsumm
 
 	
 ## 4. Create EC2 machine (Ubuntu) 
@@ -98,7 +98,7 @@ Email: srivanoo21@gmail.com
 ## 5. Open EC2 and Install docker in EC2 Machine:
 	
 	
-	#optinal
+	#optional
 
 	sudo apt-get update -y
 
@@ -113,6 +113,10 @@ Email: srivanoo21@gmail.com
 	sudo usermod -aG docker ubuntu
 
 	newgrp docker
+
+    #check if docker is running fine by running below command: 
+    
+    docker --version
 	
 # 6. Configure EC2 as self-hosted runner:
     setting>actions>runner>new self hosted runner> choose os> then run command one by one
@@ -126,6 +130,6 @@ Email: srivanoo21@gmail.com
 
     AWS_REGION = us-east-1
 
-    AWS_ECR_LOGIN_URI = demo>>  566373416292.dkr.ecr.ap-south-1.amazonaws.com
+    AWS_ECR_LOGIN_URI = demo>>  069883532009.dkr.ecr.ap-southeast-2.amazonaws.com
 
-    ECR_REPOSITORY_NAME = simple-app
+    ECR_REPOSITORY_NAME = textsumm
