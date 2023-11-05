@@ -24,7 +24,7 @@ https://github.com/srivanoo21/Text_Summarizer_01
 ### STEP 01- Create a conda environment after opening the repository
 
 ```bash
-conda create -n summary python=3.8 -y
+conda create -p myenv python=3.8 -y
 ```
 
 ```bash
